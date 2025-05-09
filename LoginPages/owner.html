@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to HomeSeek - Owner</title>
+    <link rel="icon" href="../Logo/Logo.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <script type="text/javascript" src="signin.js"></script>
+</head>
+<body onload="autoslide()">
+    
+    <nav class="nav">
+        <h1 class="hs">HomeSeek &#9900;</h1>
+        <a href="../HomePage/index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact Us</a>
+    </nav>
+
+    <div>
+        <h1 class="title">Welcome to HomeSeek - Owner</h1>
+        <img src="housing.jpg" class="welcomeimg" id="pic" alt="Picture displaying houses" width="800px" height="500px">
+    </div>
+
+    <div class="blank">
+    </div>
+
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <!-- Signup Form for Owner -->
+        <div class="signup">
+            <form action="owner_signup.php" method="POST">
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" id="signup-username" placeholder="User Name" required="">
+                <input type="email" name="email" id="signup-email" placeholder="Email" required="">
+                <input type="text" name="company" id="signup-company" placeholder="Company/Property Name" required="">
+                <input type="password" name="pswd" id="signup-password" placeholder="Password" required="">
+                <input type="submit" value="Sign Up" class="button">
+            </form>
+        </div>
+
+        <!-- Login Form for Owner -->
+        <div class="login">
+            <form action="owner_login.php" method="POST">
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" id="login-email" placeholder="Email" required="">
+                <input type="password" name="pswd" id="login-password" placeholder="Password" required="">
+                <input type="submit" value="Login" class="button">
+            </form>
+        </div>
+    </div>
+
+    <nav class="footer">
+        <h1>Copyright &copy; HomeSeek 2024. All Rights Reserved.</h1>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,53 @@
+-<!--This is Login Page is for Students-->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to HomeSeek</title>
+	<link rel="icon" href= "../Logo/Logo.png" type="image/x-icon" />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript" src="signin.js"></script>
+	
+</head>
+<body onload="autoslide()">
+	
+	<nav class="nav">
+		<h1 class="hs">HomeSeek &#9900;</h1>
+		<a href="../HomePage/index.html">Home</a>
+		
+		<a href="#">About</a>
+		
+		<a href="#">Contact Us</a>
+	</nav>
+    <div>
+        <h1 class="title">Welcome to HomeSeek</h1>
+        <img src="housing.jpg" class="welcomeimg" id="pic" alt="Picture displaying houses." width="800px" height="500px">
+    </div>
+	<div class="blank">
+
+	</div>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form action="studentsignup.php" method="POST">
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="txt" id="signup-username" placeholder="User name" required="">
+					<input type="email" name="email" id="signup-email" placeholder="Email" required="">
+					<input type="password" name="pswd" id="signup-password" placeholder="Password" required="">
+					<input type="submit" value="Sign Up" class="button">
+				</form>
+			</div>
+			<div class="login">
+				<form action="studentlogin.php" method="POST">
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="email" id="login-email" placeholder="Email" required="">
+					<input type="password" name="pswd" id="login-password" placeholder="Password" required="">
+					<input type="submit" value="Login" class="button">
+				</form>
+			</div>
+	</div>
+	<nav class="footer">
+		<h1>Copyright &copy; HomeSeek 2024. All Rights Reserved.</h1>
+	</nav>
+</body>
+</html>

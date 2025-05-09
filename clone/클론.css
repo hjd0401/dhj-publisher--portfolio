@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+
+}
+body{
+  overflow-x: hidden;
+}
+.apple-nav {
+  background-color: #f5f5f7;
+  padding: 12px 0;
+  position: sticky;
+  top: 0px;
+  z-index: 10; 
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nav-menu i {
+  font-size: 18px;
+}
+
+.first{
+  background-color: black;
+  width: 100%;
+  height: 500px;
+  color: white;
+}
+.first-pa, .sec-pa{
+  text-align: center;
+}
+.first-image{
+  width: 400px;
+  height:250px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
+
+}
+
+.first-AI, .Sec-AI{
+  text-align: center;
+
+}
+.btn {
+padding: 12px 24px;
+border-radius: 30px;
+font-size: 16px;
+cursor: pointer;
+border: none;
+display: inline-block;
+display: inline-block;
+}
+
+.button-box {
+display: flex;
+justify-content: center;
+gap: 15px;
+
+}
+
+.btn.blue {
+background-color: #0071e3;
+color: white;
+}
+
+.btn.outline {
+background-color: transparent;
+border: 1px solid #0071e3;
+color: #0071e3;
+}
+
+.btn.outline:hover {
+background-color: #0071e3;
+color: white;
+}
+
+
+.gap{
+  width: 100%;
+  height: 10px;
+  background-color: white;
+}
+.secound {
+  background: linear-gradient(to bottom, #0a174e, #ffffff);
+  padding: 100px 0;
+  text-align: center;
+  color: rgb(252, 250, 250);
+}
+
+.Sec-AI{
+  font-size: 24px;
+}
+.sec-last{
+  color: black;
+}
+.fir{
+  background: linear-gradient(to bottom, #bfe1fb, #ffffff);
+padding: 100px 0;
+text-align: center;
+}
+.bookpro{
+  background-color: black;
+  color: white;
+  
+}
+.propara{
+  text-align: center;
+}
+.main{
+  text-align: center;
+}
+.thir-pa, .thi-intro{
+  text-align: center;
+  font-size: 28px;
+  font-style: bold;
+}
+
+.thi-img{
+  width: 330px;
+  height: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gradient-text{
+  background: linear-gradient(to right, #e03e5d, #ff6e40, #f7b731, #4cd964, #5ac8fa, #007aff, #5856d6);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-weight: bold;
+text-align: center;
+}
+.grid-wrap {
+  display: grid;
+  grid-template-columns: 48% 50%;
+  justify-content: center;
+  gap: 10px;
+}
+
+.grid-card {
+  background: linear-gradient(to bottom right, #f2d6c1, #cfdff9);
+  padding: 20px 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+.grid-card, .bookpro, .macbook-img, .fir {
+  padding: 40px 0;
+}
+
+.grid-card h2 {
+  font-size: 20px;
+}
+
+.grid-card p {
+  font-size: 14px;
+}
+
+.air-img,
+.mac-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel {
+  width: 100vw;
+  aspect-ratio: 16 / 5.5;
+  overflow: hidden;
+  margin: 0 auto; 
+  position: relative;
+}
+
+
+
+.slides {
+  display: flex;
+  width: calc(100vw * 9); 
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100vw;
+  flex-shrink: 0;
+  
+}
+
+.slide img {
+  width: 150%;         
+  max-width: 950px;
+  height: auto;
+  display: block;
+  margin: 0 auto;    
+  object-fit: contain;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
+}
+.grid-wrap > .carousel {
+  grid-column: 1 / -1;
+}
+.next{
+ margin-left: 1350px;
+ cursor: pointer;
+ border-radius: 20px;
+ width: 25px;
+ height: 25px;
+ background-color: rgb(180, 178, 178);
+ border: none;
+ font-size: 16px;
+}
+.footer-wrap {
+  background-color: #f5f5f7;
+  width: 100vw; /* 💥 여기 핵심! 화면 전체 너비 */
+  padding: 40px 0;
+}
+
+.footer-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.last-line{
+  width: 70%;
+  height: 1px;
+  background-color: #d2d2d7;
+  margin: 0 auto;
+  margin-top: 30px;
+  
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 13px;
+  color: #333;
+}
+
+.footer-links .column {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-links .column strong {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-links a {
+  display: block;
+  color: #333;
+  text-decoration: none; /* ❌ 기본 밑줄 제거 */
+  cursor: pointer;       /* ✅ 손가락 커서 */
+  margin: 4px 0;
+  transition: all 0.2s ease; /* 부드럽게 */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* ✅ 마우스 올리면 밑줄 생김 */
+}

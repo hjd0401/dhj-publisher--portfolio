@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Housing Options</title>
+    <link rel="stylesheet" href="homelisting.css">
+    <script type="text/javascript" src = "filtering.js"></script>
+    <link rel="icon" href= "../Logo/Logo.png" type="image/x-icon" />
+    
+</head>
+<body>
+    <nav class="nav">
+        <h1 class="hs">HomeSeek &#9900;</h1>
+        <a href="../Home/homepage.html">Home</a>
+        <a href="../HouseList/homelisting.html">Listings</a>
+        <a href="../Tips/housingtips.html">Housing Tips</a>
+        <a href="../Contact/contact.html">Contact</a>
+    </nav>
+
+    <h1 class="expl">Explore Available Homes</h1>
+
+    <!-- Search and Filter Section -->
+    <div class="fs">
+        <input type="text" id="searchInput" placeholder="Search by title, city, price..." onkeyup="filterListings()">
+
+        <select id="cityFilter" onchange="filterListings()">
+            <option value="">All Cities</option>
+            <option value="Brampton, ON">Brampton, ON</option>
+            <option value="Mississauga, ON">Mississauga, ON</option>
+            <option value="Toronto, ON">Toronto, ON</option>
+            <option value="Kitchener, ON">Kitchener, ON</option>
+            <option value="Oshawa, ON">Oshawa, ON</option>
+            <option value="Caledon, ON">Caledon, ON</option>
+            <option value="London, ON">London, ON</option>
+        </select>
+
+        <select id="priceFilter" onchange="filterListings()">
+            <option value="">Any Price</option>
+            <option value="low">Under $800</option>
+            <option value="medium">$800 - $1,200</option>
+            <option value="high">Above $1,200</option>
+        </select>
+    </div>
+
+    <div class="listing" id="list">
+        <div class="listing-card" data-title="Affordable Student Room Near Brampton Campus" data-city="Brampton, ON" data-price="500">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/asr.jpg');" ></div>
+                <div class="card-image" style="background-image: url('./HouseImages/asr1.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/asr.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+
+            <div class="card-content" id="cc" onclick="openModal('Affordable Student Room Near Brampton Campus', 'Brampton, ON', '$500/month', '(416) 123-4567', 'bramptonhousing101@example.com')">
+                <h2>Affordable Student Room Near Brampton Campus</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:bramptonhousing101@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Cozy Student Apartment in Mississauga" data-city="Mississauga, ON" data-price="700">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/csa.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/csa1.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/csa2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/csa3.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('Cozy Student Apartment in Mississauga', 'Mississauga, ON', '$700/month', '(905) 234-5678', 'mississaugastudenthomes@example.com')">
+                <h2>Cozy Student Apartment in Mississauga</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:mississaugastudenthomes@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Shared Basement Unit for Students in London" data-city="London, ON" data-price="550">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/sbu.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/sbu2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/sbu3.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/sbu4.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('Shared Basement Unit for Students in London', 'London, ON', '$550/month', '(519) 345-6789', 'londonroomsavailable@example.com')">
+                <h2>Shared Basement Unit for Students in London</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:londonroomsavailable@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Modern Studio Apartment for Rent – Kitchener" data-city="Kitchener, ON" data-price="800">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/msa.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/msa2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/msa3.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/msa4.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('Modern Studio Apartment for Rent – Kitchener', 'Kitchener, ON', '$550/month', '(226) 789-1234', 'kitchenerstudentrentals@example.com')">
+                <h2>Modern Studio Apartment for Rent – Kitchener</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto: kitchenerstudentrentals@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Student Housing Near University of Toronto" data-city="Toronto, ON" data-price="1500">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/shn.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/shn2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/shn3.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/shn4.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('Student Housing Near University of Toronto', 'Toronto, ON', '$1,500/month', '(647) 456-7890', 'torontorooms2024@example.com')">
+                <h2>Student Housing Near University of Toronto</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:torontorooms2024@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="2-Bedroom Unit for Rent in Oshawa" data-city="Oshawa, ON" data-price="750">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/2bu.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/2bu2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/2bu3.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/2bu4.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('2-Bedroom Unit for Rent in Oshawa<', 'Oshawa, ON', '$750/month', '(905) 987-6543', 'oshawahousing@studentliving.com')">
+                <h2>2-Bedroom Unit for Rent in Oshawa</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:oshawahousing@studentliving.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Student-Friendly Studio in Caledon" data-city="Caledon, ON" data-price="1800">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/sfs.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/sfs2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/sfs3.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/sfs4.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('Student-Friendly Studio in Caledon', 'Caledon, ON', '$1,800/month', '(905) 555-6789', 'caledonhousing@example.com<')">
+                <h2>Student-Friendly Studio in Caledon</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:caledonhousing@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Furnished Student Basement in Brampton" data-city="Brampton, ON" data-price="600">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/fsb.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/fsb2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/fsb3.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/fsb4.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('Furnished Student Basement in Brampton', 'Brampton, ON', '$600/month', '(416) 321-7654', 'bramptonstudentrooms@example.com')">
+                <h2>Furnished Student Basement in Brampton</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:bramptonstudentrooms@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Private Room for Rent Near Sheridan Mississauga" data-city="Mississauga, ON" data-price="800">
+            <div class="card-image-container">
+                <div class="card-image" style="background-image: url('./HouseImages/prr.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/prr2.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/prr3.jpg');"></div>
+                <div class="card-image" style="background-image: url('./HouseImages/prr4.jpg');"></div>
+                <button class="prev-arrow" onclick="changeImage(this, -1)">&#9664;</button>
+                <button class="next-arrow" onclick="changeImage(this, 1)">&#9654;</button>
+            </div>
+            <div class="card-content" onclick="openModal('Private Room for Rent Near Sheridan Mississauga', 'Mississauga, ON', '$800/month', '(905) 321-4321', 'sheridanliving@example.com')">
+                <h2>Private Room for Rent Near Sheridan Mississauga</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:sheridanliving@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="3-Bedroom Apartment for Students in London" data-city="London, ON" data-price="1800">
+            <div class="card-image" style="background-image: url('./HouseImages/3br.jpg');"></div>
+            <div class="card-content" onclick="openModal('3-Bedroom Apartment for Students in London', 'London, ON', '$1,800/month', '(519) 567-2345', 'londonstudentrooms@example.com')">
+                <h2>3-Bedroom Apartment for Students in London</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:londonstudentrooms@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Single Room in Shared Apartment – Kitchener" data-city="Kitchener, ON" data-price="1300">
+            <div class="card-image" style="background-image: url('./HouseImages/srs.jpeg');"></div>
+            <div class="card-content" onclick="openModal('Single Room in Shared Apartment – Kitchener', 'Kitchener, ON', '$1,300/month', '(226) 543-7654', 'kitchenerstudentapts@example.com')">
+                <h2>Single Room in Shared Apartment – Kitchener</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:kitchenerstudentapts@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Downtown Toronto Student Housing" data-city="Toronto, ON" data-price="1600">
+            <div class="card-image" style="background-image: url('./HouseImages/dts.jpg');"></div>
+            <div class="card-content" onclick="openModal('Downtown Toronto Student Housing', 'Toronto, ON', '$1,600/month', '(647) 789-2345', 'torontostudentliving@example.com')">
+                <h2>Downtown Toronto Student Housing</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:torontostudentliving@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Affordable Student Housing in Oshawa" data-city="Oshawa, ON" data-price="1000">
+            <div class="card-image" style="background-image: url('./HouseImages/ash.jpg');"></div>
+            <div class="card-content" onclick="openModal('Affordable Student Housing in Oshawa', 'Oshawa, ON', '$1,000/month', '(905) 777-8888', 'oshawarentals@studentservices.com')">
+                <h2>Affordable Student Housing in Oshawa</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:oshawarentals@studentservices.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Large Room in Shared House – Caledon" data-city="Caledon, ON" data-price="1100">
+            <div class="card-image" style="background-image: url('./HouseImages/lrs.jpg');"></div>
+            <div class="card-content" onclick="openModal('Large Room in Shared House – Caledon', 'Caledon, ON', '$1,100/month', '(905) 234-1111', 'caledonstudenthousing@example.com')">
+                <h2>Large Room in Shared House – Caledon</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:caledonstudenthousing@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title=" Affordable Brampton Student Home – Near College" data-city="Brampton, ON" data-price="1200">
+            <div class="card-image" style="background-image: url('./HouseImages/abs.jpg');"></div>
+            <div class="card-content" onclick="openModal('Affordable Brampton Student Home – Near College', 'Brampton, ON', '$1,200/month', '(416) 654-3210', 'bramptonhousingstudents@example.com')">
+                <h2> Affordable Brampton Student Home – Near College</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:bramptonhousingstudents@example.com">Email</a></p>
+            </div>
+        </div>
+
+        <div class="listing-card" data-title="Luxury Apartment for Rent – Mississauga Students" data-city="Mississauga, ON" data-price="1600">
+            <div class="card-image" style="background-image: url('./HouseImages/lar.jpg');"></div>
+            <div class="card-content" onclick="openModal('Luxury Apartment for Rent – Mississauga Students', 'Mississauga, ON', '$1,600/month', '(905) 765-4321', 'mississaugahousingluxury@example.com')" >
+                <h2>Luxury Apartment for Rent – Mississauga Students</h2>
+            </div>
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modal-title">Title</h2>
+                <p id="modal-location"><strong>Location:</strong> Location</p>
+                <p id="modal-price"><strong>Price:</strong> Price</p>
+                <p id="modal-phone"><strong>Phone Number:</strong> Phone</p>
+                <p id="modal-email"><a href="mailto:mississaugahousingluxury@example.com">Email</a></p>
+            </div>
+        </div>
+       
+    </div>
+
+    <footer class="footer">
+        <h1>Copyright &copy; HomeSeek 2024. All Rights Reserved.</h1>
+    </footer>
+</body>
+</html>

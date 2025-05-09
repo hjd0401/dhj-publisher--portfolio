@@ -1,0 +1,252 @@
+html {
+    scroll-behavior: smooth;
+}
+body, .main-header h1 {
+  font-family: 'Francois One', sans-serif;
+}
+
+.about h2, .about p {
+  font-family: 'Francois One', sans-serif;
+}
+
+
+.main-header{ 
+  background:#fef6e4;
+color: #060505;
+padding: 2rem;
+text-align: center;
+display: block;
+font-size: 32px;
+font-weight: 900;
+text-transform: uppercase;
+font-family: sans-serif;
+}
+
+
+.main-nav {
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffeedd; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 26px;
+    height: 90px;
+    
+    
+}
+
+.main-nav a {
+  position: relative;
+  font-weight: bold;
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #111;
+}
+
+
+.btn-dark{
+  border: none !important;
+  margin-left: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  }
+#project-part {
+  scroll-margin-top: 120px; 
+  text-align: center;
+  margin-top: 16px;
+}
+.portfolio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  padding: 20px;
+  color: black;
+ 
+}
+.project-box:hover {
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+body.dark .project-box:hover {
+  box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.4);
+}
+
+body.dark .project-box {
+  color: rgb(249, 247, 247);
+  background-color: #1f1f1f; /* 다크모드에 맞는 박스 배경 */
+  border: 1px solid #333; /* 테두리도 어둡게 */
+}
+
+.project-box {
+  border: 1px solid #ccc;
+  background-color: #fdfdfd;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.project-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.hero-section{
+    height: 100vh;
+    background: #fff8f0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-style:oblique;
+}
+.profile-img{
+  margin-top: 50px;
+  width: 360px;
+  height: 50%;
+  border-radius: 65%;
+ 
+}
+
+.hero-section h1{
+    font-style: italic;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    color: rgb(11, 11, 11);
+    font-weight: 600;
+}
+.write{
+  color: black;
+}
+
+
+
+.about{
+    padding: 100px;
+    background-color: #fff3e0; 
+    color: #333;
+    text-align: center;
+}
+.bi.bi-person, .bi.bi-envelope-at-fill{
+    margin: 16px;
+}
+.bi.bi-calendar, .bi.bi-house{
+    margin: 16px;
+}
+.bi.bi-telephone-fill, .bi.bi-pencil-fill{
+    margin: 16px;
+}
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.slide-1, .slide-2, .slide-3{
+  border-radius: 10px;
+}
+
+.info-item {
+  width: 240px;
+  height: 70px;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+  
+ #contact{
+    background-color: #fffaf0;
+    text-align: center;
+    
+ }
+
+ .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* 아이콘 사이 간격 */
+}
+
+.skills-font{
+  text-align: center;
+}
+.slide-container {
+    width: 200vw;
+    display: flex;
+    transition: all 1s;
+  } 
+  .slide-box {
+    width: 100vw;
+    flex-shrink: 0;
+    
+  }
+  .slide-box img {
+    width: 30%;
+  } 
+  body.dark {
+    background: #121212;
+    color: white;
+  }
+  
+  body.dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  body.dark .main-header,
+  body.dark .main-nav,
+  body.dark .hero-section,
+  body.dark .about,
+  body.dark .info-container,
+  body.dark #contact,
+  body.dark #project-part,
+  body.dark #skills,
+  body.dark .slide-box {
+    background-color: #121212 !important;
+    color: white !important;
+  }
+  
+  body.dark a {
+    color: #cfcfcf;
+  }
+  
+  body.dark .info-item {
+    background-color: #1f1f1f;
+    color: white;
+    border: 1px solid #333;
+  }
+  
+  body.dark .hero-section h1,
+  body.dark .hero-section p,
+  body.dark .write {
+    color: white !important;
+  }
+  
+  body.dark .btn-dark {
+    border-color: #666;
+    color: white;
+  }
+
+  
+
+  
+
